@@ -1,8 +1,17 @@
 name: Hola Mundo
 
 # Controls when the action will run. Triggers the workflow on push or pull request
-on: [push, pull_request]
+on: 
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    # Sequence of patterns matched against refs/heads
+    branches:
+      - main # Push events to main branch only
 
+  pull_request:
+    branches:
+      - main # Pull requests to main branch only
+      
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
