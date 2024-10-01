@@ -9,4 +9,6 @@ jobs:
 
         steps:
             - name: ls
-              run: ls -al
+              run: |
+               echo "Hola mundo" >> hola.txt
+               cat hola.txt
