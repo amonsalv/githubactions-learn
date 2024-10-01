@@ -1,4 +1,4 @@
-apt-get update
+sudo apt-get update
 
 # Install the required packages
-apt-get install curl 
+sudo apt-get install curl 
