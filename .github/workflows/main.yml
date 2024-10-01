@@ -9,7 +9,7 @@ jobs:
 
         steps:
             - name: Checkout
-              uses: actions/checkout@v2
+              uses: checkout@v4.2.0
 
             - name: ls
               run: | # | es para ejecutar varios comandos #  Dar permisos de ejecución # Ejecutar script
