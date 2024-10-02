@@ -1,0 +1,10 @@
+name: "My action"
+description: "Test my action" 
+
+runs:
+# composite: nos permite agrupar varios pasos comunes, que podremos reutilizar en otros workflows
+  using: "composite"
+
+  steps:
+    - name: Hola mundo
+      run: echo "Hola mundo"
