@@ -13,4 +13,6 @@ jobs:
 
               # This is the step that uses the composite action
             - name: ls
-              uses: ./.github/actions
+              uses: ./.github/actions/my-action
+              with:
+                  message: "Ana"

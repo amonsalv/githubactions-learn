@@ -1,11 +1,17 @@
 name: "My action"
 description: "Test my action" 
 
+input:
+  message:
+    description: "Message to print"
+    required: true
+    default: "Hello world"
+
 runs:
 # composite: nos permite agrupar varios pasos comunes, que podremos reutilizar en otros workflows
   using: "composite"
 
   steps:
     - name: Hola mundo
-      run: echo "Hola mundo"
+      run: echo "Hola ${{ inputs.message }}"
       shell: bash
