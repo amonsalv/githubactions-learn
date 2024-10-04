@@ -12,4 +12,7 @@ jobs:
         
         steps:
             - name: Nivel step
-              run: echo "Valor ${{ vars.ENV_CONTEXT_VAR}} "
+              run: echo "Valor ${{ vars.MY_VARIABLE_2}} "
+
+            - name: Secret
+              run: echo "Valor ${{ secrets.MY_SECRET }}"
