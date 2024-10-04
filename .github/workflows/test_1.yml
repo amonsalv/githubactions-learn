@@ -6,19 +6,10 @@ jobs:
     say-hello:
         runs-on: ubuntu latest
 
-        services:
-            mysql:
-                image: mysql:5.7
-                env:
-                    MYSQL_ROOT_PASSWORD: example
-                ports:
-                    - 3306:3306
-                # options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
-
-            redis:
-                image: redis
-                ports:
-                    - 6379:6379
+        # Variables de entorno: https://docs.github.com/es/actions/reference/environment-variables
+        env:
+            MY_VAR: Mi variable de entorno
+        
         steps:
             - name: Test
-              run: ls
+              run: echo "Valor $MY_VAR"
