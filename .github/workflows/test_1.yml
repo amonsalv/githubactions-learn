@@ -1,10 +1,9 @@
 name: Ejemplo de Composite Action
-
 on: [push]
 
 jobs:
     say-hello:
-        runs-on: ubuntu latest
+        runs-on: ubuntu-latest
 
         # Variables de entorno: https://docs.github.com/es/actions/reference/environment-variables
         env:
