@@ -1,0 +1,20 @@
+name: Test
+
+on: [push]
+
+
+jobs:
+    test-build:
+        runs-on: ubuntu-latest
+
+        steps:
+          # Uso del SSH para clonar el repositorio: esto se suele usar para hacer autodeploy en servidores
+            - name: Ls
+              run: |
+                mkdir -p ~/.ssh
+                echo "${{ secrets.SSH }} " > ~/.ssh/id_rsa
+                chmod 600 ~/.ssh/id_rsa
+                ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+                cat ~/.ssh/know_hosts
+              
